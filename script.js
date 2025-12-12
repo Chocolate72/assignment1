@@ -17,3 +17,10 @@ const buttons = [
   document.getElementById("part5")
 ];
 
+
+buttons.forEach((button, i) => {
+  button.addEventListener("click", () => {
+    indexes[i] = (indexes[i] + 1) % arrays[i].length;
+    button.textContent = arrays[i][indexes[i]];
+  });
+});
