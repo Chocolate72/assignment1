@@ -24,3 +24,10 @@ buttons.forEach((button, i) => {
     button.textContent = arrays[i][indexes[i]];
   });
 });
+
+
+//TO generate the complete story
+document.getElementById("tellStory").addEventListener("click", () => {
+  const story = buttons.map(button => button.textContent).join(" ");
+  output.textContent = story + ".";
+});
