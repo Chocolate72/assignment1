@@ -39,3 +39,16 @@ document.getElementById("randomStory").addEventListener("click", () => {
     .join(" ");
   output.textContent = story + ".";
 });
+
+// to reset story selection 
+document.getElementById("reset").addEventListener("click", () => {
+  indexes = [0, 0, 0, 0, 0];
+
+  buttons[0].textContent = part1[0];
+  buttons[1].textContent = part2[0];
+  buttons[2].textContent = part3[0];
+  buttons[3].textContent = part4[0];
+  buttons[4].textContent = part5[0];
+
+  output.textContent = "";
+});
