@@ -26,8 +26,16 @@ buttons.forEach((button, i) => {
 });
 
 
-//TO generate the complete story
+//To generate the complete story
 document.getElementById("tellStory").addEventListener("click", () => {
   const story = buttons.map(button => button.textContent).join(" ");
+  output.textContent = story + ".";
+});
+
+//To generate a random story
+document.getElementById("randomStory").addEventListener("click", () => {
+  const story = arrays
+    .map(arr => arr[Math.floor(Math.random() * arr.length)])
+    .join(" ");
   output.textContent = story + ".";
 });
