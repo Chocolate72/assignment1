@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 // Story parts arrays
 const part1 = ["The funny dog", "A silly robot", "The tiny dinosaur"];
 const part2 = ["jumped over", "ran into", "slid under"];
@@ -17,11 +19,16 @@ const buttons = [
   document.getElementById("part5")
 ];
 
+// grouped arrays
+const arrays = [part1, part2, part3, part4, part5];
+
+// reference to output area
+const output = document.getElementById("output");
 
 buttons.forEach((button, i) => {
   button.addEventListener("click", () => {
-    indexes[i] = (indexes[i] + 1) % arrays[i].length;
-    button.textContent = arrays[i][indexes[i]];
+    indices[i] = (indices[i] + 1) % arrays[i].length;
+    button.textContent = arrays[i][indices[i]];
   });
 });
 
@@ -51,4 +58,6 @@ document.getElementById("reset").addEventListener("click", () => {
   buttons[4].textContent = part5[0];
 
   output.textContent = "";
+});
+
 });
